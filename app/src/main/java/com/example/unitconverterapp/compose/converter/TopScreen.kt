@@ -43,8 +43,6 @@ fun TopScreen(
     val typedValue = remember { mutableStateOf("0.0") }*/
 
 
-    /*Spacer(modifier = Modifier
-        .statusBarsPadding())*/
 
             Column(modifier =  Modifier.verticalScroll(rememberScrollState())) {
                 ConversionMenu(list = list, isLandscape) {
