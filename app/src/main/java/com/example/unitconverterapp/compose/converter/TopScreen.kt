@@ -32,9 +32,7 @@ fun TopScreen(
     save: (String, String) -> Unit,
 ) {
 
-    /*var toSave by remember {
-        mutableStateOf(false)
-    }*/
+
 
 
     //not required because passing these arguments to viewmodel to handle the screen rotation changes
