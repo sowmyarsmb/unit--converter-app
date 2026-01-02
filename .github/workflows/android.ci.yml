@@ -39,9 +39,17 @@ jobs:
       - name: Run unit tests
         run: ./gradlew testDebugUnitTest
 
+      # Add Android Lint
+      - name: Run Lint
+        run: ./gradlew lint
+
       # Build Debug APK
       - name: Build Debug APK
         run: ./gradlew assembleDebug
+
+        # Build Release APK (unsigned)
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
 
       # Upload APK artifact
       - name: Upload APK
@@ -49,3 +57,11 @@ jobs:
         with:
           name: unit-converter-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
+
+                # Upload Release APK
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-converter-release-apk
+          path: app/build/outputs/apk/release/app-release-unsigned.apk
+
