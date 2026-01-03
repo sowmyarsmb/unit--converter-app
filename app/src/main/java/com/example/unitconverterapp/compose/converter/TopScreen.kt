@@ -70,10 +70,11 @@ fun TopScreen(
 
                     val message1 = "${typedValue.value} ${selectedConversion.value!!.convertFrom}"
                     val message2 = "$roundedResult ${selectedConversion.value!!.convertTo}"
-                   // if (toSave) {
+                    save(message1, message2)
+                   /*// if (toSave) {
                         save(message1, message2)
                      //   toSave = false
-                  //  }
+                  //  }*/
 
                     // Passing values to lambda function
                     ResultBlock(message1 = message1, message2 = message2)
